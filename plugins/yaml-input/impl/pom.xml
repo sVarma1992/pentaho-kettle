@@ -12,7 +12,9 @@
 
   <artifactId>yaml-input-plugins-impl</artifactId>
   <name>PDI Yaml Input Plugins Impl</name>
-
+  <properties>
+    <snakeyaml.version>1.7</snakeyaml.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>pentaho-kettle</groupId>
@@ -29,7 +31,17 @@
       <artifactId>jackcess</artifactId>
       <scope>compile</scope>
     </dependency>
-
+    <dependency>
+      <groupId>org.yaml</groupId>
+      <artifactId>snakeyaml</artifactId>
+      <version>${snakeyaml.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
     <!-- Test dependencies -->
     <dependency>
       <groupId>org.hamcrest</groupId>

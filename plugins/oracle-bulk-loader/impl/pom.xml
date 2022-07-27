@@ -13,6 +13,10 @@
   <artifactId>oracle-bulk-loader-plugins-impl</artifactId>
   <name>PDI Oracle Bulk Loader Plugins Impl</name>
 
+  <properties>
+    <poi.version>4.1.1</poi.version>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>pentaho-kettle</groupId>
@@ -23,6 +27,17 @@
       <groupId>pentaho-kettle</groupId>
       <artifactId>kettle-engine</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>${poi.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <!-- Test dependencies -->
     <dependency>

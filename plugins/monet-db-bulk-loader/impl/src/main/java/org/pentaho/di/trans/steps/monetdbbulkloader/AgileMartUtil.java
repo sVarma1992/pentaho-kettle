@@ -20,7 +20,7 @@
  *
  ******************************************************************************/
 
-package org.pentaho.di.trans.steps.tableagilemart;
+package org.pentaho.di.trans.steps.monetdbbulkloader;
 
 import java.io.File;
 import java.text.DateFormat;

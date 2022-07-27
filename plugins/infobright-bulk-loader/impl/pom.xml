@@ -12,7 +12,9 @@
 
   <artifactId>infobright-bulk-loader-plugins-impl</artifactId>
   <name>PDI Infobright Bulk Loader Plugins Impl</name>
-
+  <properties>
+    <infobright-core.version>3.4</infobright-core.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>pentaho-kettle</groupId>
@@ -29,7 +31,17 @@
       <artifactId>jackcess</artifactId>
       <scope>compile</scope>
     </dependency>
-
+    <dependency>
+      <groupId>infobright</groupId>
+      <artifactId>infobright-core</artifactId>
+      <version>${infobright-core.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
     <!-- Test dependencies -->
     <dependency>
       <groupId>org.mockito</groupId>

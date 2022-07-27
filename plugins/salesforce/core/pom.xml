@@ -20,6 +20,7 @@
 
     <pdi.version>9.4.0.0-SNAPSHOT</pdi.version>
     <com.force.api.version>54.0.0</com.force.api.version>
+    <rome.version>1.0</rome.version>
   </properties>
 
   <build>
@@ -109,6 +110,12 @@
       <artifactId>kettle-core</artifactId>
       <version>${pdi.version}</version>
       <classifier>tests</classifier>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>rome</groupId>
+      <artifactId>rome</artifactId>
+      <version>${rome.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

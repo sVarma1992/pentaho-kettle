@@ -12,7 +12,9 @@
 
   <artifactId>edi2xml-plugins-impl</artifactId>
   <name>EDI 2 XML Plugins Impl</name>
-
+  <properties>
+    <antlr-complete.version>3.5.2</antlr-complete.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>pentaho-kettle</groupId>
@@ -29,7 +31,17 @@
       <artifactId>jackcess</artifactId>
       <scope>compile</scope>
     </dependency>
-
+    <dependency>
+      <groupId>org.antlr</groupId>
+      <artifactId>antlr-complete</artifactId>
+      <version>${antlr-complete.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
     <!-- Test dependencies -->
     <dependency>
       <groupId>org.mockito</groupId>
